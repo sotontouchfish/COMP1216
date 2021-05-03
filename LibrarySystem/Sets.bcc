@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scCarrierSet name="USERS" org.eventb.core.source="/LibrarySystem/Sets.buc|org.eventb.core.contextFile#Sets|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USERS)"/>
+    <org.eventb.core.scCarrierSet name="PASSWORDS" org.eventb.core.source="/LibrarySystem/Sets.buc|org.eventb.core.contextFile#Sets|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(PASSWORDS)"/>
+</org.eventb.core.scContextFile>

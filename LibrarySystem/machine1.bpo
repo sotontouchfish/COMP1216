@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="23">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="16">
+        <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="user_pwd" org.eventb.core.type="ℙ(USERS×PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="logined" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="22">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTALLHYPuser_pwe"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS×PASSWORDS))∈(∅ ⦂ ℙ(USERS)) → PASSWORDS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTuser_pwe" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="user_pwd'" org.eventb.core.type="ℙ(USERS×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPuser_pwe" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTIDENTuser_pwe" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="LOGIN/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="23">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTHYPuser_pwf'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user∈dom(user_pwd)∧user_pwd∈USERS ⇸ PASSWORDS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#-|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#-|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTHYPuser_pwf'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTuser_pwf" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+        <org.eventb.core.poIdentifier name="pwd" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPuser_pwf'" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTIDENTuser_pwf" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈users" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#-|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPuser_pwf" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTHYPuser_pwf'" org.eventb.core.poStamp="23">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pwd=user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#-|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTuser_pwg" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPuser_pwg" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#EVTIDENTuser_pwg" org.eventb.core.poStamp="22">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#0|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/machine1.bpo|org.eventb.core.poFile#machine1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="22">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="users⊆USERS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user_pwd∈users → PASSWORDS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="logined⊆USERS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#\/"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

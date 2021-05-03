@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="64">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        <org.eventb.core.poIdentifier name="Admin" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.poIdentifier name="Lecturer" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.poPredicate name="PASSWORDT" org.eventb.core.predicate="Admin∈TYPE" org.eventb.core.source="/LibrarySystem/SetsType.buc|org.eventb.core.contextFile#SetsType|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="PASSWORDU" org.eventb.core.predicate="Lecturer∈TYPE" org.eventb.core.source="/LibrarySystem/SetsType.buc|org.eventb.core.contextFile#SetsType|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poPredicate name="PASSWORDV" org.eventb.core.predicate="Admin≠Lecturer" org.eventb.core.source="/LibrarySystem/SetsType.buc|org.eventb.core.contextFile#SetsType|org.eventb.core.axiom#1"/>
+        <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poPredicate name="PASSWORDW" org.eventb.core.predicate="ROOT∈USERS" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="user_pwd" org.eventb.core.type="ℙ(USERS×PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="logined" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="admins" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="accountType" org.eventb.core.type="ℙ(USERS×TYPE)"/>
+        <org.eventb.core.poIdentifier name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poPredicate name="accountTypf" org.eventb.core.predicate="users⊆USERS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poPredicate name="accountTypg" org.eventb.core.predicate="user_pwd∈users → PASSWORDS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poPredicate name="accountTyph" org.eventb.core.predicate="logined⊆USERS" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.invariant#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="inv2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="64">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ABSHYP"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lecturers⊆users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ABSHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admins'∪(∅ ⦂ ℙ(USERS))=(∅ ⦂ ℙ(USERS))" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#\/"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS×TYPE))∈(∅ ⦂ ℙ(USERS)) ↣ TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#\/"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admins'⊆(∅ ⦂ ℙ(USERS))" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#\/"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ROOT∈admins'" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#G"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#\/"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#G"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypf" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="accountType'" org.eventb.core.type="ℙ(USERS×TYPE)"/>
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="admins'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="user_pwd'" org.eventb.core.type="ℙ(USERS×PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="root'" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="lecturers'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypf" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypf" org.eventb.core.poStamp="63"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypg" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="pwd" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypg" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypg" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈users" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#-|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pwd=user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#-|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTyph" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTyph" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTyph" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#0|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="REGISTER/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypi"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admin∈dom(accountType)∧accountType∈USERS ⇸ TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypi"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="REGISTER/grd1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypi"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="accountType(admin)=Admin" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypi"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="REGISTER/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypi"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="accountType∪{user ↦ type}∈users∪{user} ↣ TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#REGISTER\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="REGISTER/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypi"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admins⊆users∪{user}" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#REGISTER\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="REGISTER/users/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypi"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="users∪{user}=users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.action#-"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#REGISTER\/users\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="REGISTER/user_pwd/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypi"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user_pwd∪{user ↦ pwd}=user_pwd" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.action#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#REGISTER\/user_pwd\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypi" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="type" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.poIdentifier name="accountType'" org.eventb.core.type="ℙ(USERS×TYPE)"/>
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="pwd" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="user_pwd'" org.eventb.core.type="ℙ(USERS×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypi" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypi" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="accountType(admin)=Admin" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∉users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pwd∈PASSWORDS∨pwd∉PASSWORDS" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="type∈TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#9|org.eventb.core.guard#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CHANGEPWD/grd1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypj"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CHANGEPWD/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypj("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user∈dom(user_pwd)∧user_pwd∈USERS ⇸ PASSWORDS" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypj("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CHANGEPWD/grd3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypj("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oldpwd=user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypj("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CHANGEPWD/user_pwd/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(user_pwd ∖ {user ↦ oldpwd})∪{user ↦ newpwd}=user_pwd" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.action#."/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#CHANGEPWD\/user_pwd\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypj" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="newpwd" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="oldpwd" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="user_pwd'" org.eventb.core.type="ℙ(USERS×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPaccountTypj(" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypj" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="newpwd∈PASSWORDS∨newpwd∉PASSWORDS" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypj" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypj(" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="oldpwd=user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="SETROLE/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypk"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admin∈dom(accountType)∧accountType∈USERS ⇸ TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#?|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#?|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypk"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="SETROLE/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypk"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="accountType ∖ {user ↦ type}∈users ↣ TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#?"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#SETROLE\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypk" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="type" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.poIdentifier name="accountType'" org.eventb.core.type="ℙ(USERS×TYPE)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypk" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypk" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="accountType(admin)=Admin" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#?|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#?|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="type∈TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#?|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="SETADMIN/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(admins∪{user})∪lecturers=(∅ ⦂ ℙ(USERS))" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#@"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#SETADMIN\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="SETADMIN/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admins∪{user}⊆users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#@"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#SETADMIN\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="SETADMIN/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="root∈admins∪{user}" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#G"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#@"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#G"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#SETADMIN\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypl" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="admins'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypl" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypl" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈admins" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#@|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∉admins∧user∈USERS" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#@|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="SETLECTER/grd2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypm'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user∉lecturers∧user∈USERS" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#A|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#A|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypm'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="SETLECTER/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTALLHYPaccountTypm"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admins∪(lecturers∪{user})=(∅ ⦂ ℙ(USERS))" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#A"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poSequent#SETLECTER\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaccountTypm" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="lecturers'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPaccountTypm'" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTIDENTaccountTypm" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈admins" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#A|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaccountTypm" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#EVTHYPaccountTypm'" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∉lecturers∧user∈USERS" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.event#A|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="63">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lecturers⊆users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="admins∪lecturers=(∅ ⦂ ℙ(USERS))" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="accountType∈users ↣ TYPE" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#="/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="admins⊆users" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="root∈admins" org.eventb.core.source="/LibrarySystem/machine2.bum|org.eventb.core.machineFile#machine2|org.eventb.core.invariant#G"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/LibrarySystem/Sets.bcc|org.eventb.core.scContextFile#Sets" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.extendsContext#'"/>
+    <org.eventb.core.scInternalContext name="Sets">
+        <org.eventb.core.scCarrierSet name="USERS" org.eventb.core.source="/LibrarySystem/Sets.buc|org.eventb.core.contextFile#Sets|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.scCarrierSet name="PASSWORDS" org.eventb.core.source="/LibrarySystem/Sets.buc|org.eventb.core.contextFile#Sets|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(PASSWORDS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scAxiom name="Sett" org.eventb.core.label="axm1" org.eventb.core.predicate="ROOT∈USERS" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="ROOT" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.constant#(" org.eventb.core.type="USERS"/>
+</org.eventb.core.scContextFile>
