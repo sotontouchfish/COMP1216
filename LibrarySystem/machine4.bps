@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CRELIST/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="RMLIST/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ADDRES/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="RMRES/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CRELIST/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RMLIST/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ADDRES/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RMRES/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

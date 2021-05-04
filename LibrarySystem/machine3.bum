@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine2"/>
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine1"/>
     <org.eventb.core.seesContext name="B" org.eventb.core.target="ct2"/>
     <org.eventb.core.variable name=")" org.eventb.core.identifier="users"/>
-    <org.eventb.core.variable name="F" org.eventb.core.identifier="root"/>
     <org.eventb.core.variable name="+" org.eventb.core.identifier="user_pwd"/>
     <org.eventb.core.variable name="." org.eventb.core.identifier="logined"/>
-    <org.eventb.core.variable name=";" org.eventb.core.identifier="accountType"/>
     <org.eventb.core.variable name="C" org.eventb.core.identifier="lecturers"/>
     <org.eventb.core.variable name="D" org.eventb.core.identifier="admins"/>
     <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
@@ -38,14 +36,8 @@
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGEPWD">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGEPWD"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETROLE">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETROLE"/>
-    </org.eventb.core.event>
     <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETADMIN">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETADMIN"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETLECTER">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETLECTER"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="O" org.eventb.core.identifier="book"/>
     <org.eventb.core.variable name="P" org.eventb.core.identifier="website"/>
@@ -59,7 +51,7 @@
     <org.eventb.core.invariant name="X" org.eventb.core.label="inv1" org.eventb.core.predicate="book ⊆ RESOURCES"/>
     <org.eventb.core.invariant name="]" org.eventb.core.label="inv2" org.eventb.core.predicate="website ⊆ RESOURCES"/>
     <org.eventb.core.invariant name="^" org.eventb.core.label="inv3" org.eventb.core.predicate="article ⊆ RESOURCES"/>
-    <org.eventb.core.invariant name="Y" org.eventb.core.label="inv4" org.eventb.core.predicate="book_titles ⊆ book → TITLES"/>
+    <org.eventb.core.invariant name="Y" org.eventb.core.label="inv4" org.eventb.core.predicate="book_titles ∈ book → TITLES"/>
     <org.eventb.core.invariant name="Z" org.eventb.core.label="inv5" org.eventb.core.predicate="book_authors ∈ book → AUTHORS"/>
     <org.eventb.core.invariant name="[" org.eventb.core.label="inv6" org.eventb.core.predicate="book_urls ∈ book → URLS"/>
     <org.eventb.core.invariant name="\" org.eventb.core.label="inv7" org.eventb.core.predicate="book_ISBNs ∈ book → ISBNS"/>
