@@ -121,5 +121,4 @@
         <org.eventb.core.action name="element4" org.eventb.core.assignment="list_resource ≔ list_resource ∖ {list ↦ resource}" org.eventb.core.comment="The resources to be deleted exist in the list" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="'7" org.eventb.core.label="inv4" org.eventb.core.predicate="list_resource ∈ lists  list_resources"/>
-    <org.eventb.core.event name="'8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BORROW"/>
 </org.eventb.core.machineFile>

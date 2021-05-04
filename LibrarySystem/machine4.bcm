@@ -320,5 +320,4 @@
         <org.eventb.core.scAction name="resourcf" org.eventb.core.assignment="list_resources ≔ list_resources ∖ {resource}" org.eventb.core.label="act1" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5|org.eventb.core.action#act1"/>
         <org.eventb.core.scAction name="resourcg" org.eventb.core.assignment="list_resource ≔ list_resource ∖ {list ↦ resource}" org.eventb.core.label="act2" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5|org.eventb.core.action#element4"/>
     </org.eventb.core.scEvent>
-    <org.eventb.core.scEvent name="website_authos." org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BORROW" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'8"/>
 </org.eventb.core.scMachineFile>
