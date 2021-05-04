@@ -7,5 +7,4 @@
     <org.eventb.core.carrierSet name="+" org.eventb.core.identifier="TOKENS"/>
     <org.eventb.core.carrierSet name="," org.eventb.core.identifier="INVALID"/>
     <org.eventb.core.carrierSet name="." org.eventb.core.identifier="ISSUED"/>
-    <org.eventb.core.carrierSet name="/" org.eventb.core.identifier="BOOKS"/>
 </org.eventb.core.contextFile>
