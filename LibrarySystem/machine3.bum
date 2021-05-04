@@ -86,10 +86,13 @@
         <org.eventb.core.action name=";" org.eventb.core.assignment="book_ISBNs ≔ book_ISBNs ∪ {b ↦ ISBN}" org.eventb.core.label="act5"/>
         <org.eventb.core.action name="=" org.eventb.core.assignment="book_publishers ≔ book_publishers ∪ {b ↦ publisher}" org.eventb.core.label="act6"/>
         <org.eventb.core.action name="&gt;" org.eventb.core.assignment="publish_year ≔ publish_year ∪ {b ↦ book_publish_year}" org.eventb.core.label="act7"/>
-        <org.eventb.core.guard name="?" org.eventb.core.label="grd7" org.eventb.core.predicate="title ∈ TITLES"/>
-        <org.eventb.core.guard name="@" org.eventb.core.label="grd8" org.eventb.core.predicate="author ∈ AUTHORS"/>
+        <org.eventb.core.guard name="?" org.eventb.core.label="grd7" org.eventb.core.predicate="title ∈ TITLES" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="@" org.eventb.core.label="grd8" org.eventb.core.predicate="author ∈ AUTHORS" org.eventb.core.theorem="true"/>
         <org.eventb.core.guard name="A" org.eventb.core.label="grd9" org.eventb.core.predicate="publisher ∈ PUBLISHERS"/>
         <org.eventb.core.guard name="B" org.eventb.core.label="grd10" org.eventb.core.predicate="book_publish_year ∈ 0‥year"/>
+        <org.eventb.core.guard name="E" org.eventb.core.label="grd13" org.eventb.core.predicate="b ∈ RESOURCES"/>
+        <org.eventb.core.guard name="C" org.eventb.core.label="grd11" org.eventb.core.predicate="url ∈ URLS"/>
+        <org.eventb.core.guard name="D" org.eventb.core.label="grd12" org.eventb.core.predicate="ISBN ∈ ISBNS"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rmBOOK">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
