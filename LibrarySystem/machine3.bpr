@@ -87,19 +87,19 @@
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(RESOURCES×TITLES))∈(∅ ⦂ ℙ(RESOURCES)) → TITLES"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬Admin=Lecturer">
             <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℙ(RESOURCES×TITLES)))⊆(∅ ⦂ ℙ(RESOURCES)) → TITLES"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Admin≠Lecturer">
             <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="AUTHORS,RESOURCES">
         <org.eventb.core.lang name="L"/>
@@ -121,8 +121,8 @@
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="RESOURCES,URLS">
         <org.eventb.core.lang name="L"/>
@@ -144,8 +144,8 @@
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(RESOURCES×URLS))∈(∅ ⦂ ℙ(RESOURCES)) → URLS"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ISBNS,RESOURCES">
         <org.eventb.core.lang name="L"/>
@@ -167,8 +167,8 @@
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="PUBLISHERS,RESOURCES">
         <org.eventb.core.lang name="L"/>
@@ -190,8 +190,8 @@
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="RESOURCES">
         <org.eventb.core.lang name="L"/>
@@ -292,8 +292,8 @@
             <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
             <org.eventb.core.prIdent name="article" org.eventb.core.type="ℙ(RESOURCES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="inv9/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -2353,8 +2353,8 @@
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="AUTHORS,RESOURCES">
         <org.eventb.core.lang name="L"/>
@@ -2376,8 +2376,8 @@
             <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="addWebsite/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -2779,8 +2779,8 @@
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(RESOURCES×URLS))∈(∅ ⦂ ℙ(RESOURCES)) → URLS"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="addWebsite/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -4026,5 +4026,317 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="admins=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="admins∪lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Admin≠Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Lecturer∈TYPE">
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Admin∈TYPE">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ROOT∈USERS">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USERS"/>
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="logined⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬Admin=Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="book⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="book" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="website⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="website" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="article⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="article" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="inv5/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="admins=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="admins∪lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Admin≠Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Lecturer∈TYPE">
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Admin∈TYPE">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ROOT∈USERS">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USERS"/>
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="logined⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬Admin=Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="book⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="book" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="website⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="website" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="article⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="article" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="inv7/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="admins=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="admins∪lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Admin≠Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Lecturer∈TYPE">
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Admin∈TYPE">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ROOT∈USERS">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USERS"/>
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="logined⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬Admin=Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="book⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="book" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="website⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="website" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="article⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="article" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="inv8/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="admins=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="admins∪lecturers=(∅ ⦂ ℙ(USERS))">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Admin≠Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Lecturer∈TYPE">
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Admin∈TYPE">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ROOT∈USERS">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USERS"/>
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="logined⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬Admin=Lecturer">
+            <org.eventb.core.prIdent name="Admin" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="Lecturer" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USERS">
+            <org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+            <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="book⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="book" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="website⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="website" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="article⊆RESOURCES">
+            <org.eventb.core.prIdent name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
+            <org.eventb.core.prIdent name="article" org.eventb.core.type="ℙ(RESOURCES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>

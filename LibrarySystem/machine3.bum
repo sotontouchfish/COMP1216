@@ -59,7 +59,7 @@
     <org.eventb.core.invariant name="X" org.eventb.core.label="inv1" org.eventb.core.predicate="book ⊆ RESOURCES"/>
     <org.eventb.core.invariant name="]" org.eventb.core.label="inv2" org.eventb.core.predicate="website ⊆ RESOURCES"/>
     <org.eventb.core.invariant name="^" org.eventb.core.label="inv3" org.eventb.core.predicate="article ⊆ RESOURCES"/>
-    <org.eventb.core.invariant name="Y" org.eventb.core.label="inv4" org.eventb.core.predicate="book_titles ⊆ book → TITLES"/>
+    <org.eventb.core.invariant name="Y" org.eventb.core.label="inv4" org.eventb.core.predicate="book_titles ∈ book → TITLES"/>
     <org.eventb.core.invariant name="Z" org.eventb.core.label="inv5" org.eventb.core.predicate="book_authors ∈ book → AUTHORS"/>
     <org.eventb.core.invariant name="[" org.eventb.core.label="inv6" org.eventb.core.predicate="book_urls ∈ book → URLS"/>
     <org.eventb.core.invariant name="\" org.eventb.core.label="inv7" org.eventb.core.predicate="book_ISBNs ∈ book → ISBNS"/>
@@ -75,6 +75,7 @@
         <org.eventb.core.parameter name="," org.eventb.core.identifier="publisher"/>
         <org.eventb.core.parameter name="-" org.eventb.core.identifier="book_publish_year"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name="C" org.eventb.core.label="grd11" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="6" org.eventb.core.label="grd2" org.eventb.core.predicate="b ∉ book "/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="url ∉ ran(book_urls)"/>
         <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="ISBN ∉ ran(book_ISBNs)"/>
@@ -94,6 +95,7 @@
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="b"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd3" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="b ∈ book"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="book ≔ book ∖ {b} " org.eventb.core.label="act1"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="book_titles ≔ {b} ⩤ book_titles" org.eventb.core.label="act2"/>
@@ -107,9 +109,10 @@
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="w"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="title"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="7" org.eventb.core.label="grd8" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="6" org.eventb.core.label="grd7" org.eventb.core.predicate="author ∈ AUTHORS"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="title ∈ TITLES" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="title ∈ TITLES"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="w ∉ website"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="url ∉ ran(website_urls)"/>
         <org.eventb.core.action name="/" org.eventb.core.assignment="website ≔ website ∪ {w}" org.eventb.core.label="act1"/>
@@ -122,7 +125,8 @@
     <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rmWebsite">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="w"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="w ∈ website"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="website ≔ website ∖ {w}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="website_titles ≔ {w} ⩤ website_titles" org.eventb.core.label="act2"/>
@@ -145,10 +149,11 @@
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="a"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="title"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="a ∉ article"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="title ∈ TITLES"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="author ∈ AUTHORS"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="title ∈ TITLES" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="author ∈ AUTHORS" org.eventb.core.theorem="true"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="url ∉ ran(article_urls)"/>
         <org.eventb.core.parameter name="/" org.eventb.core.identifier="author"/>
         <org.eventb.core.parameter name="0" org.eventb.core.identifier="url"/>
@@ -160,7 +165,8 @@
     <org.eventb.core.event name="r" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rmArticle">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="a"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="a ∈ article"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="article ≔ article ∖ {a}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="article_titles ≔ {a} ⩤ article_titles" org.eventb.core.label="act2"/>
