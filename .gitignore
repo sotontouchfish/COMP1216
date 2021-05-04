@@ -3,4 +3,16 @@
 /test
 /testrun
 LibrarySystem.zip
-
+/.gitignore
+/LibrarySystem/.project
+/LibrarySystem/ct2.*
+/LibrarySystem/Auctions.*
+/LibrarySystem/machine1.*
+/LibrarySystem/machine2.*
+/LibrarySystem/machine3.*
+/LibrarySystem/Root.*
+/LibrarySystem/Sets.*
+/LibrarySystem/Sets1.*
+/LibrarySystem/SetsType.*
+/LibrarySystem/.idea
+/LibrarySystem/LibrarySystem.iml
