@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine4"/>
+    <org.eventb.core.seesContext name="B" org.eventb.core.target="ct4"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="users"/>
+    <org.eventb.core.variable name="F" org.eventb.core.identifier="root"/>
+    <org.eventb.core.variable name="+" org.eventb.core.identifier="user_pwd"/>
+    <org.eventb.core.variable name="." org.eventb.core.identifier="logined"/>
+    <org.eventb.core.variable name=";" org.eventb.core.identifier="accountType"/>
+    <org.eventb.core.variable name="C" org.eventb.core.identifier="lecturers"/>
+    <org.eventb.core.variable name="D" org.eventb.core.identifier="admins"/>
+    <org.eventb.core.variable name="O" org.eventb.core.identifier="book"/>
+    <org.eventb.core.variable name="P" org.eventb.core.identifier="website"/>
+    <org.eventb.core.variable name="Q" org.eventb.core.identifier="article"/>
+    <org.eventb.core.variable name="R" org.eventb.core.identifier="book_titles"/>
+    <org.eventb.core.variable name="S" org.eventb.core.identifier="book_authors"/>
+    <org.eventb.core.variable name="T" org.eventb.core.identifier="book_urls"/>
+    <org.eventb.core.variable name="U" org.eventb.core.identifier="book_ISBNs"/>
+    <org.eventb.core.variable name="V" org.eventb.core.identifier="book_publishers"/>
+    <org.eventb.core.variable name="W" org.eventb.core.identifier="publish_year"/>
+    <org.eventb.core.variable name="e" org.eventb.core.identifier="website_titles"/>
+    <org.eventb.core.variable name="g" org.eventb.core.identifier="website_authors"/>
+    <org.eventb.core.variable name="i" org.eventb.core.identifier="website_urls"/>
+    <org.eventb.core.variable name="k" org.eventb.core.identifier="article_titles"/>
+    <org.eventb.core.variable name="m" org.eventb.core.identifier="article_authors"/>
+    <org.eventb.core.variable name="o" org.eventb.core.identifier="article_urls"/>
+    <org.eventb.core.variable name="'+" org.eventb.core.comment="The resources list" org.eventb.core.identifier="list_resource"/>
+    <org.eventb.core.variable name="'6" org.eventb.core.comment="The resources in resource list" org.eventb.core.identifier="list_resources"/>
+    <org.eventb.core.variable name="'-" org.eventb.core.comment="The creator of list" org.eventb.core.identifier="list_creator"/>
+    <org.eventb.core.variable name="'1" org.eventb.core.comment="A set of all available lists" org.eventb.core.identifier="lists"/>
+    <org.eventb.core.event name="'7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="licences ≔ ∅" org.eventb.core.label="act28"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="abook ≔ ∅" org.eventb.core.label="act30"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="issued ≔ ∅" org.eventb.core.label="act31"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="tokens ≔ ∅" org.eventb.core.label="act32"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="invalid ≔ ∅" org.eventb.core.label="act33"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="borrowers ≔ ∅" org.eventb.core.label="act34"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="bookers ≔ ∅" org.eventb.core.label="act35"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="LOGIN">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="LOGIN"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="LOGOUT">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="LOGOUT"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="':" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REGISTER">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="REGISTER"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="';" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGEPWD">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGEPWD"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETROLE">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETROLE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETADMIN">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETADMIN"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETLECTER">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETLECTER"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addBOOK">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addBOOK"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="rmBOOK">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmBOOK"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addWebsite">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addWebsite"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="rmWebsite">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmWebsite"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addArticle">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addArticle"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="rmArticle">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmArticle"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CRELIST">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CRELIST"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="RMLIST">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="RMLIST"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ADDRES">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ADDRES"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="RMRES">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="RMRES"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SETLICENCES">
+        <org.eventb.core.parameter name="'" org.eventb.core.comment="The user who set licences for a book" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.comment="A book that needs to be set with licenses" org.eventb.core.identifier="b"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.comment="Number of licenses for the book" org.eventb.core.identifier="number"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is an administrator" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="Check if the book is available" org.eventb.core.label="grd3" org.eventb.core.predicate="b ∈ abook"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.comment="Number of licenses" org.eventb.core.label="grd4" org.eventb.core.predicate="number ∈ ℕ1"/>
+        <org.eventb.core.action name="grd5" org.eventb.core.assignment="licences ≔ licences ∪ {b ↦ number}" org.eventb.core.comment="Allocate the allowed number of licenses to the book" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="'K" org.eventb.core.comment="Licences for a book" org.eventb.core.identifier="licences"/>
+    <org.eventb.core.event name="'O" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="APPLYTOKEN">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who apply token for a book" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element2" org.eventb.core.comment="A book that needs to be set with licenses" org.eventb.core.identifier="b"/>
+        <org.eventb.core.action name="element3" org.eventb.core.assignment="tokens ≔ tokens ∪ {user ↦ token}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is an available" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="element4" org.eventb.core.comment="Number of books whose licenses are greater than the number of books that have been lent (including the issuance of tokens)" org.eventb.core.label="grd4" org.eventb.core.predicate="licences(b) &gt; issued(b)"/>
+        <org.eventb.core.parameter name="element5" org.eventb.core.comment="A token for user to apply" org.eventb.core.identifier="token"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="Check if the book is available" org.eventb.core.label="grd3" org.eventb.core.predicate="b ∈ abook"/>
+        <org.eventb.core.guard name="element6" org.eventb.core.comment="Verify that the format is token" org.eventb.core.label="grd5" org.eventb.core.predicate="token ∈ TOKENS"/>
+        <org.eventb.core.action name="element7" org.eventb.core.assignment="issued(b)≔issued(b)+1" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="'Q" org.eventb.core.comment="One book" org.eventb.core.identifier="abook"/>
+    <org.eventb.core.invariant name="'R" org.eventb.core.label="inv3" org.eventb.core.predicate="abook ⊆ BOOKS"/>
+    <org.eventb.core.invariant name="'Y" org.eventb.core.label="inv6" org.eventb.core.predicate="invalid ∈ users → TOKENS"/>
+    <org.eventb.core.invariant name="'L" org.eventb.core.label="inv1" org.eventb.core.predicate="licences ∈ abook → 0‥limit"/>
+    <org.eventb.core.variable name="'S" org.eventb.core.comment="Number of this book loaned" org.eventb.core.identifier="issued"/>
+    <org.eventb.core.invariant name="'T" org.eventb.core.label="inv4" org.eventb.core.predicate="issued ∈ abook → 0‥limit"/>
+    <org.eventb.core.variable name="'V" org.eventb.core.comment="A set of tokens for a user" org.eventb.core.identifier="tokens"/>
+    <org.eventb.core.invariant name="'W" org.eventb.core.label="inv5" org.eventb.core.predicate="tokens ∈ users → TOKENS"/>
+    <org.eventb.core.event name="'X" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REVOKETOKEN">
+        <org.eventb.core.parameter name="'" org.eventb.core.comment="The administrator" org.eventb.core.identifier="admin"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.comment="A book that needs to be set with licenses" org.eventb.core.identifier="b"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.comment="The user whose token will be revoked" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.comment="A token to be reviked" org.eventb.core.identifier="token"/>
+        <org.eventb.core.guard name="+" org.eventb.core.comment="This user is an available" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users"/>
+        <org.eventb.core.guard name="," org.eventb.core.comment="This admin is an available" org.eventb.core.label="grd2" org.eventb.core.predicate="admin ∈ admins"/>
+        <org.eventb.core.guard name="-" org.eventb.core.comment="This admin is logged in" org.eventb.core.label="grd3" org.eventb.core.predicate="admin ∈ logined"/>
+        <org.eventb.core.guard name="." org.eventb.core.comment="Check if the book is exist" org.eventb.core.label="grd4" org.eventb.core.predicate="b ∈ abook"/>
+        <org.eventb.core.guard name="/" org.eventb.core.comment="Check if the token is exist" org.eventb.core.label="grd5" org.eventb.core.predicate="token ∈ TOKENS ∧ token ∉ ∅"/>
+        <org.eventb.core.guard name="0" org.eventb.core.comment="Check if the token is for this user" org.eventb.core.label="grd6" org.eventb.core.predicate="token = tokens(user)"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="tokens ≔ tokens ∖ {user ↦ token}" org.eventb.core.comment="Clear a valid token" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="invalid ≔ invalid ∪ {user ↦ token}" org.eventb.core.comment="Make a valid token invalid" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="3" org.eventb.core.assignment="issued(b)≔issued(b)−1" org.eventb.core.comment="Restore book lending records" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="'Z" org.eventb.core.comment="A set of invalid tokens for a user" org.eventb.core.identifier="invalid"/>
+    <org.eventb.core.event name="'[" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BORROW">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who borrow a book" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element2" org.eventb.core.comment="A book to borrow" org.eventb.core.identifier="b"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is an available" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="Check if the book is available" org.eventb.core.label="grd3" org.eventb.core.predicate="b ∈ abook"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.comment="Check if the token is exist" org.eventb.core.label="grd5" org.eventb.core.predicate="token ∈ TOKENS ∧ token ∉ ∅"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.comment="Check if the token is for this user" org.eventb.core.label="grd6" org.eventb.core.predicate="token = tokens(user)"/>
+        <org.eventb.core.action name="act1" org.eventb.core.assignment="tokens ≔ tokens ∖ {user ↦ token}" org.eventb.core.comment="Clear valid tokens" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="invalid ≔ invalid ∪ {user ↦ token}" org.eventb.core.comment="Make a valid token invalid" org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name="element5" org.eventb.core.comment="A token for user to borrow" org.eventb.core.identifier="token"/>
+        <org.eventb.core.action name="element6" org.eventb.core.assignment="borrowers ≔ borrowers ∪ {b ↦ user}" org.eventb.core.comment="Add user to the list of borrowers" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="'\" org.eventb.core.label="inv7" org.eventb.core.predicate="borrowers ∈ abook → USERS"/>
+    <org.eventb.core.variable name="']" org.eventb.core.comment="A set of borrowers for a book" org.eventb.core.identifier="borrowers"/>
+    <org.eventb.core.event name="'^" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RERURN">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who return a book" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element2" org.eventb.core.comment="Returned book" org.eventb.core.identifier="b"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is an available" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="Check if the book is available" org.eventb.core.label="grd3" org.eventb.core.predicate="b ∈ abook"/>
+        <org.eventb.core.guard name="element3" org.eventb.core.comment="Check if the user is one of the borrowers" org.eventb.core.label="grd4" org.eventb.core.predicate="user = borrowers(b)"/>
+        <org.eventb.core.action name="element4" org.eventb.core.assignment="borrowers ≔ borrowers ∖ {b ↦ user}" org.eventb.core.comment="Remove user to the list of borrowers" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="element5" org.eventb.core.assignment="issued(b)≔issued(b)−1" org.eventb.core.comment="Restore book lending records" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'_" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RESERVE">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who reserve a book" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element2" org.eventb.core.comment="A book that is reserved" org.eventb.core.identifier="b"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is an available" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="Check if the book exists" org.eventb.core.label="grd3" org.eventb.core.predicate="b ∈ abook"/>
+        <org.eventb.core.guard name="element3" org.eventb.core.comment="If the number of licences and books lent is the same" org.eventb.core.label="grd4" org.eventb.core.predicate="licences(b) = issued(b)"/>
+        <org.eventb.core.action name="element4" org.eventb.core.assignment="bookers ≔ bookers ∪ {b ↦ user}" org.eventb.core.comment="Add user to the list of reserve" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="'`" org.eventb.core.comment="A set of bookers for a book" org.eventb.core.identifier="bookers"/>
+    <org.eventb.core.invariant name="'a" org.eventb.core.label="inv8" org.eventb.core.predicate="bookers ∈ abook → USERS"/>
+</org.eventb.core.machineFile>
