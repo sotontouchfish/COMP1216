@@ -2,5 +2,7 @@
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
     <org.eventb.core.extendsContext name="'" org.eventb.core.target="Sets"/>
     <org.eventb.core.constant name="(" org.eventb.core.identifier="ROOT"/>
-    <org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="ROOT ∈ USERS"/>
+    <org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="ROOT ∈ USER"/>
+    <org.eventb.core.constant name="*" org.eventb.core.identifier="ROOT_PWD"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="ROOT_PWD ∈ PASSWORD"/>
 </org.eventb.core.contextFile>
