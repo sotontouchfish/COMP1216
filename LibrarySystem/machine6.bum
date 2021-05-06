@@ -58,6 +58,7 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmBOOK"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="book_licence ≔ {b} ⩤ book_licence" org.eventb.core.label="act8"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="token_book ≔ token_book ⩥ {b}" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="reservelist ≔ {b} ⩤ reservelist" org.eventb.core.label="act10"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="'@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addWebsite">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addWebsite"/>
@@ -129,17 +130,19 @@
         <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="element4" org.eventb.core.label="grd2" org.eventb.core.predicate="token ∈ tokens"/>
         <org.eventb.core.action name="element7" org.eventb.core.assignment="book_licence ≔ ({b} ⩤ book_licence) ∪ {b ↦ (book_licence(b) + 1)}" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="tokens ≔ tokens ∖ {token}" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="element5" org.eventb.core.assignment="token_book ≔ {token}⩤ token_book" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="element8" org.eventb.core.label="grd4" org.eventb.core.predicate="b ∈ book"/>
         <org.eventb.core.guard name="element9" org.eventb.core.label="grd5" org.eventb.core.predicate="token ∈ TOKEN"/>
         <org.eventb.core.guard name="element6" org.eventb.core.label="grd3" org.eventb.core.predicate="token_book(token) = b"/>
+        <org.eventb.core.guard name="element:" org.eventb.core.label="grd6" org.eventb.core.predicate="∀u·u ∈ token_book[user_token[{user}]] ∧ u = b"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ReserveBook">
         <org.eventb.core.parameter name="element1" org.eventb.core.identifier="user"/>
         <org.eventb.core.parameter name="element2" org.eventb.core.identifier="b"/>
         <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ logined"/>
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd4" org.eventb.core.predicate="b ∈ book"/>
-        <org.eventb.core.guard name="element3" org.eventb.core.label="grd5" org.eventb.core.predicate="user ≠ reservelist(b)"/>
+        <org.eventb.core.guard name="element3" org.eventb.core.label="grd5" org.eventb.core.predicate="user = reservelist(b)"/>
         <org.eventb.core.action name="element4" org.eventb.core.assignment="reservelist ≔ reservelist ∪ {b ↦ user}" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="element5" org.eventb.core.label="grd6" org.eventb.core.predicate="book_licence(b) = 0"/>
     </org.eventb.core.event>
@@ -162,7 +165,6 @@
         <org.eventb.core.action name="." org.eventb.core.assignment="user_token ≔ user_token ⩥ {token}" org.eventb.core.label="act3"/>
         <org.eventb.core.parameter name="/" org.eventb.core.identifier="b"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="token_book(token) = b"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="token ∈ ran(user_token)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RELEASE">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>

@@ -626,9 +626,8 @@
             <org.eventb.core.prAnte name="'">
                 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
                 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                    <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
@@ -638,7 +637,7 @@
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ROOT_PWD∈PASSWORD"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="{ROOT ↦ ROOT_PWD}∈{ROOT} → PASSWORD"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="REGISTER/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="PASSWORD,USER">
         <org.eventb.core.lang name="L"/>
@@ -657,14 +656,8 @@
                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
-                                    <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p5,p15"/>
-                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p1,p6,p7,p5,p15">
-                                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                                            <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
-                                        </org.eventb.core.prRule>
-                                    </org.eventb.core.prAnte>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p1,p6,p7,p15">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                 </org.eventb.core.prRule>
                             </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
@@ -701,25 +694,30 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬user∈users"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="SETLECTURER/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="USER">
+    <org.eventb.core.prProof name="SETLECTURER/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="PASSWORD,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
-                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p1,p2,p6,p7">
-                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                            <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p3,p1,p8,p4,p9,p10,p17">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
@@ -728,44 +726,57 @@
         <org.eventb.core.prIdent name="admin" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="user_pwd" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
         <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬user∈admins"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="logined⊆USER"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="users⊆USER"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬lecturers=USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="user_pwd∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈users"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬user∈lecturers"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="admins⊆USER"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="user∉admins"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="admin∈logined"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬user∈admins"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="admin∈admins"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="lecturers≠USER"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(lecturers∪{user})∩admins=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ROOT∈USER">
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ROOT∈USER">
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USER"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈users"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬user∈lecturers"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
-            <org.eventb.core.prIdent name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="lecturers⊂USER"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
             <org.eventb.core.prIdent name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="admins⊆USER"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="user∉admins"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∉lecturers"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="user∉lecturers"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="SETADMIN/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="USER">
+    <org.eventb.core.prProof name="SETADMIN/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="PASSWORD,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
-                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p1,p2,p6,p7">
-                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                            <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p3,p1,p8,p4,p9,p10,p17">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
@@ -774,28 +785,35 @@
         <org.eventb.core.prIdent name="admin" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="user_pwd" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
         <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬user∈admins"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="logined⊆USER"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="users⊆USER"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬lecturers=USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="user_pwd∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈users"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬user∈lecturers"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="admins⊆USER"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="user∉admins"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="admin∈logined"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬user∈admins"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="admin∈admins"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ROOT∈USER">
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="lecturers≠USER"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ROOT∈USER">
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USER"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lecturers∩(admins∪{user})=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈users"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬user∈lecturers"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
-            <org.eventb.core.prIdent name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="lecturers⊂USER"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
             <org.eventb.core.prIdent name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="admins⊆USER"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="user∉lecturers"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∉admins"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="user∉lecturers"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="CHANGEPWD/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="PASSWORD,USER">
         <org.eventb.core.lang name="L"/>
@@ -814,14 +832,8 @@
                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
-                                    <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9,p4,p3,p18"/>
-                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p7,p8,p1,p10,p9,p4,p3,p18">
-                                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                                            <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
-                                        </org.eventb.core.prRule>
-                                    </org.eventb.core.prAnte>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p6,p7,p8,p4,p3,p1,p10,p18">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                 </org.eventb.core.prRule>
                             </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
@@ -861,9 +873,8 @@
             <org.eventb.core.prIdent name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USER">
         <org.eventb.core.lang name="L"/>
@@ -1202,20 +1213,26 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="SetAdminToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="USER">
+    <org.eventb.core.prProof name="SetAdminToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="PASSWORD,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p5,p1,p4,p3,p6">
-                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                            <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p7,p4,p1,p8,p6,p5,p9,p17">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
@@ -1225,26 +1242,33 @@
         <org.eventb.core.prIdent name="admin" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="user_pwd" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
         <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="admin∈admins"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="user≠ROOT"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ROOT∈USER"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="lecturers∩admins⊆{user}"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="user∈users"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="lecturers∩admins⊆{user}"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="logined⊆USER"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="users⊆USER"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬lecturers=USER"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user_pwd∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="user∈users"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="admins⊆USER"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="user∈admins"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="admin∈logined"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="admin∈admins"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="lecturers≠USER"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ROOT∈USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="lecturers⊂USER"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lecturers∩(admins ∖ {user})=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
-            <org.eventb.core.prIdent name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
             <org.eventb.core.prIdent name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="admins⊆USER"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈admins"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬user=ROOT"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬user=ROOT"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="SetLecturerToNormal/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USER">
         <org.eventb.core.lang name="L"/>
@@ -1292,19 +1316,25 @@
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="SetLecturerToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="USER">
+    <org.eventb.core.prProof name="SetLecturerToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="PASSWORD,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4,p1,p2,p3">
-                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
-                            <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p14"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p6,p4,p1,p7,p2,p5,p15">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
@@ -1313,25 +1343,32 @@
         <org.eventb.core.prIdent name="admin" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="admins" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="lecturers" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="logined" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="user_pwd" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
         <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="lecturers∩admins⊆{user}"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="logined⊆USER"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="users⊆USER"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬lecturers=USER"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="user_pwd∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="user∈users"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="admins⊆USER"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="admin∈logined"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="admin∈admins"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈lecturers"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="ROOT∈USER">
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="lecturers≠USER"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ROOT∈USER">
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="USER"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="lecturers∩admins⊆{user}"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USER"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="user∈users"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
-            <org.eventb.core.prIdent name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="lecturers⊂USER"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ROOT_PWD∈PASSWORD">
             <org.eventb.core.prIdent name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="admins⊆USER"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(lecturers ∖ {user})∩admins=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="lecturers∩admins=(∅ ⦂ ℙ(USER))"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>
