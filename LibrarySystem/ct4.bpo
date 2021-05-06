@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="11">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poFile org.eventb.core.poStamp="15">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poPredicate name="ROOT_PWE" org.eventb.core.predicate="ROOT∈USER" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="ROOT_PWF" org.eventb.core.predicate="ROOT_PWD∈PASSWORD" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#+"/>
         <org.eventb.core.poIdentifier name="AUTHORS" org.eventb.core.type="ℙ(AUTHORS)"/>
         <org.eventb.core.poIdentifier name="URLS" org.eventb.core.type="ℙ(URLS)"/>
         <org.eventb.core.poIdentifier name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
@@ -10,13 +16,10 @@
         <org.eventb.core.poIdentifier name="year" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poPredicate name="PUBLISHERT" org.eventb.core.predicate="year&gt;0" org.eventb.core.source="/LibrarySystem/ct2.buc|org.eventb.core.contextFile#ct2|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poIdentifier name="LISTS" org.eventb.core.type="ℙ(LISTS)"/>
-        <org.eventb.core.poIdentifier name="TOKENS" org.eventb.core.type="ℙ(TOKENS)"/>
-        <org.eventb.core.poIdentifier name="INVALID" org.eventb.core.type="ℙ(INVALID)"/>
-        <org.eventb.core.poIdentifier name="LICENCES" org.eventb.core.type="ℙ(LICENCES)"/>
-        <org.eventb.core.poIdentifier name="ISSUED" org.eventb.core.type="ℙ(ISSUED)"/>
-        <org.eventb.core.poIdentifier name="limit" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="TOKEN" org.eventb.core.type="ℙ(TOKEN)"/>
+        <org.eventb.core.poIdentifier name="TokenLimit" org.eventb.core.type="ℤ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/ct4.bpo|org.eventb.core.poFile#ct4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="limit∈ℕ1" org.eventb.core.source="/LibrarySystem/ct4.buc|org.eventb.core.contextFile#ct4|org.eventb.core.axiom#)"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/ct4.bpo|org.eventb.core.poFile#ct4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TokenLimit∈ℕ1" org.eventb.core.source="/LibrarySystem/ct4.buc|org.eventb.core.contextFile#ct4|org.eventb.core.axiom#)"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

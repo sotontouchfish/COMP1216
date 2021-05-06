@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SEARCH_FOR_BOOK/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SEARCH_FOR_BOOK/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SEARCH_FOR_RESOURCES/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SEARCH_FOR_RESOURCES/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="REGISTER/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="REGISTER/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="rmBOOK/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="rmBOOK/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="rmBOOK/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="addBOOK/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="addBOOK/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="addBOOK/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BorrowBook/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="69" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BorrowBook/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="69" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BorrowBook/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="69" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BorrowBook/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="69" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BorrowBook/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="69" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReturnBook/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReturnBook/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReturnBook/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReturnBook/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReserveBook/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReserveBook/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ReserveBook/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="REVOKEN/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="71" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="REVOKEN/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="72" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="REVOKEN/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="72" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="66" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="70" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="70" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="70" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="70" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="70" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RELEASE/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="70" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

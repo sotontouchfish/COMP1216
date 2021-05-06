@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="130">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="93">
+<org.eventb.core.poFile org.eventb.core.poStamp="132">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="132">
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poPredicate name="ROOT_PWE" org.eventb.core.predicate="ROOT∈USER" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="ROOT_PWF" org.eventb.core.predicate="ROOT_PWD∈PASSWORD" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#+"/>
         <org.eventb.core.poIdentifier name="AUTHORS" org.eventb.core.type="ℙ(AUTHORS)"/>
         <org.eventb.core.poIdentifier name="URLS" org.eventb.core.type="ℙ(URLS)"/>
         <org.eventb.core.poIdentifier name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
-        <org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
         <org.eventb.core.poIdentifier name="ISBNS" org.eventb.core.type="ℙ(ISBNS)"/>
         <org.eventb.core.poIdentifier name="TITLES" org.eventb.core.type="ℙ(TITLES)"/>
         <org.eventb.core.poIdentifier name="PUBLISHERS" org.eventb.core.type="ℙ(PUBLISHERS)"/>
         <org.eventb.core.poIdentifier name="year" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poPredicate name="PUBLISHERT" org.eventb.core.predicate="year&gt;0" org.eventb.core.source="/LibrarySystem/ct2.buc|org.eventb.core.contextFile#ct2|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poIdentifier name="LISTS" org.eventb.core.type="ℙ(LISTS)"/>
-        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
-        <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="USER"/>
-        <org.eventb.core.poIdentifier name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
-        <org.eventb.core.poPredicate name="PUBLISHERU" org.eventb.core.predicate="ROOT∈USER" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#)"/>
-        <org.eventb.core.poPredicate name="PUBLISHERV" org.eventb.core.predicate="ROOT_PWD∈PASSWORD" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="website_authors" org.eventb.core.type="ℙ(RESOURCES×AUTHORS)"/>
         <org.eventb.core.poIdentifier name="website" org.eventb.core.type="ℙ(RESOURCES)"/>
         <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(USER)"/>
@@ -65,7 +64,7 @@
         <org.eventb.core.poPredicate name="website_authos/" org.eventb.core.predicate="article_authors∈article → AUTHORS" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.invariant#n"/>
         <org.eventb.core.poPredicate name="website_authos0" org.eventb.core.predicate="article_urls∈article → URLS" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.invariant#p"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="125">
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authort"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(LISTS×USER))∈(∅ ⦂ ℙ(LISTS)) → USER" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'\/"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#G"/>
@@ -74,7 +73,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="125">
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authort"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(LISTS×RESOURCES))∈(∅ ⦂ ℙ(LISTS)) → (∅ ⦂ ℙ(RESOURCES))" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#G"/>
@@ -83,7 +82,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authort" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authort" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="website_titles'" org.eventb.core.type="ℙ(RESOURCES×TITLES)"/>
         <org.eventb.core.poIdentifier name="book_urls'" org.eventb.core.type="ℙ(RESOURCES×URLS)"/>
         <org.eventb.core.poIdentifier name="website'" org.eventb.core.type="ℙ(RESOURCES)"/>
@@ -109,64 +108,64 @@
         <org.eventb.core.poIdentifier name="lecturers'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="resources'" org.eventb.core.type="ℙ(RESOURCES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authort" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authort" org.eventb.core.poStamp="125"/>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authoru" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authort" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authort" org.eventb.core.poStamp="132"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authoru" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="pwd" org.eventb.core.type="PASSWORD"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USER)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authoru" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authoru" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authoru" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authoru" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈users" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt&gt;|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∉logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt&gt;|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pwd∈PASSWORD" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt&gt;|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="pwd=user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt&gt;|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorv" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorv" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="logined'" org.eventb.core.type="ℙ(USER)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorv" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorv" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorv" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorv" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#0|org.eventb.core.guard#("/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorw" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorw" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="pwd" org.eventb.core.type="PASSWORD"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="user_pwd'" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorw" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorw" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorw" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorw" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∉users" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt1|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="admin∈admins" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt1|org.eventb.core.guard#2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="admin∈logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt1|org.eventb.core.guard#3"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="pwd∈PASSWORD" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt1|org.eventb.core.guard#4"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorx" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorx" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="oldPwd" org.eventb.core.type="PASSWORD"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="user_pwd'" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
         <org.eventb.core.poIdentifier name="newPwd" org.eventb.core.type="PASSWORD"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorx" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorx" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorx" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorx" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈users" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt=|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt=|org.eventb.core.guard#2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="newPwd≠user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt=|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="newPwd∈PASSWORD" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt=|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="oldPwd=user_pwd(user)" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt=|org.eventb.core.guard#1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authory" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authory" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="admins'" org.eventb.core.type="ℙ(USER)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authory" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authory" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authory" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authory" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈admins" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt;|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∉admins" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt;|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="admin∈logined" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt;|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="user∈users" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt;|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="user∉lecturers" org.eventb.core.source="/LibrarySystem/machine1.bum|org.eventb.core.machineFile#machine1|org.eventb.core.event#evt;|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorz" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authorz" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="b" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="author" org.eventb.core.type="AUTHORS"/>
         <org.eventb.core.poIdentifier name="book_urls'" org.eventb.core.type="ℙ(RESOURCES×URLS)"/>
@@ -183,7 +182,7 @@
         <org.eventb.core.poIdentifier name="publish_year'" org.eventb.core.type="ℙ(RESOURCES×ℤ)"/>
         <org.eventb.core.poIdentifier name="url" org.eventb.core.type="URLS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorz" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorz" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authorz" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authorz" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈admins" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#a|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="b∉book" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#a|org.eventb.core.guard#6"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="url∉ran(book_urls)" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#a|org.eventb.core.guard#1"/>
@@ -193,7 +192,7 @@
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="publisher∈PUBLISHERS" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#a|org.eventb.core.guard#A"/>
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="book_publish_year∈0 ‥ year" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#a|org.eventb.core.guard#B"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author{" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author{" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="b" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="book_urls'" org.eventb.core.type="ℙ(RESOURCES×URLS)"/>
         <org.eventb.core.poIdentifier name="book_publishers'" org.eventb.core.type="ℙ(RESOURCES×PUBLISHERS)"/>
@@ -204,11 +203,11 @@
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="publish_year'" org.eventb.core.type="ℙ(RESOURCES×ℤ)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author{" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author{" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author{" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author{" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈admins" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#b|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="b∈book" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#b|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author|" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author|" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="website_titles'" org.eventb.core.type="ℙ(RESOURCES×TITLES)"/>
         <org.eventb.core.poIdentifier name="author" org.eventb.core.type="AUTHORS"/>
         <org.eventb.core.poIdentifier name="website'" org.eventb.core.type="ℙ(RESOURCES)"/>
@@ -219,14 +218,14 @@
         <org.eventb.core.poIdentifier name="website_authors'" org.eventb.core.type="ℙ(RESOURCES×AUTHORS)"/>
         <org.eventb.core.poIdentifier name="url" org.eventb.core.type="URLS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author|" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author\|" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author|" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author\|" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈admins" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#c|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="author∈AUTHORS" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#c|org.eventb.core.guard#6"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="title∈TITLES" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#c|org.eventb.core.guard#5"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="w∉website" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#c|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="url∉ran(website_urls)" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#c|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author}" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author}" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="website_titles'" org.eventb.core.type="ℙ(RESOURCES×TITLES)"/>
         <org.eventb.core.poIdentifier name="website'" org.eventb.core.type="ℙ(RESOURCES)"/>
         <org.eventb.core.poIdentifier name="website_urls'" org.eventb.core.type="ℙ(RESOURCES×URLS)"/>
@@ -234,11 +233,11 @@
         <org.eventb.core.poIdentifier name="w" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="website_authors'" org.eventb.core.type="ℙ(RESOURCES×AUTHORS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author}" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author}" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author}" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author}" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈admins" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#d|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="w∈website" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#d|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author~" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_author~" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="author" org.eventb.core.type="AUTHORS"/>
         <org.eventb.core.poIdentifier name="title" org.eventb.core.type="TITLES"/>
         <org.eventb.core.poIdentifier name="article'" org.eventb.core.type="ℙ(RESOURCES)"/>
@@ -249,14 +248,14 @@
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="url" org.eventb.core.type="URLS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author~" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author~" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_author~" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_author~" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈admins" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#q|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a∉article" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#q|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="title∈TITLES" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#q|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="author∈AUTHORS" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#q|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="url∉ran(article_urls)" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#q|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos'" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos'" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="article'" org.eventb.core.type="ℙ(RESOURCES)"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="article_urls'" org.eventb.core.type="ℙ(RESOURCES×URLS)"/>
@@ -264,11 +263,11 @@
         <org.eventb.core.poIdentifier name="article_titles'" org.eventb.core.type="ℙ(RESOURCES×TITLES)"/>
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="RESOURCES"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos'" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos'" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos'" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos'" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈admins" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#r|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a∈article" org.eventb.core.source="/LibrarySystem/machine3.bum|org.eventb.core.machineFile#machine3|org.eventb.core.event#r|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="CRELIST/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="125">
+    <org.eventb.core.poSequent name="CRELIST/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list_creator{list ↦ creator}∈lists∪{list} → USER" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'\/"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#~"/>
@@ -276,7 +275,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#CRELIST\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="CRELIST/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="125">
+    <org.eventb.core.poSequent name="CRELIST/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list_resource{list ↦ resource}∈lists∪{list} → resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#~"/>
@@ -284,7 +283,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#CRELIST\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos(" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos(" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="resource" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="lists'" org.eventb.core.type="ℙ(LISTS)"/>
         <org.eventb.core.poIdentifier name="list_resource'" org.eventb.core.type="ℙ(LISTS×RESOURCES)"/>
@@ -292,25 +291,25 @@
         <org.eventb.core.poIdentifier name="creator" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="list" org.eventb.core.type="LISTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos(" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos(" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos(" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos(" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="creator∈lecturers" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#~|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="creator∈logined" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#~|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="list∉lists" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#~|org.eventb.core.guard#\/"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="resource∈resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#~|org.eventb.core.guard#3"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RELIST/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="130">
+    <org.eventb.core.poSequent name="RELIST/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos))"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list∈dom(list_creator)∧list_creator∈LISTS ⇸ USER" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element4"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos))"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RELIST/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="130">
+    <org.eventb.core.poSequent name="RELIST/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos)+"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list∈dom(list_resource)∧list_resource∈LISTS ⇸ RESOURCES" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element8"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos)+"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RELIST/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="130">
+    <org.eventb.core.poSequent name="RELIST/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list_resource{list ↦ resource}∈lists → resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2"/>
@@ -318,31 +317,31 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#RELIST\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos)" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="130">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos)" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="resource" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="list_resource'" org.eventb.core.type="ℙ(LISTS×RESOURCES)"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="list" org.eventb.core.type="LISTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPwebsite_authos))" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos)" org.eventb.core.poStamp="130">
+    <org.eventb.core.poPredicateSet name="EVTHYPwebsite_authos))" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos)" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈lecturers" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#grd2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="list∈lists" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#grd3"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPwebsite_authos)+" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos))" org.eventb.core.poStamp="130">
+    <org.eventb.core.poPredicateSet name="EVTHYPwebsite_authos)+" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos))" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="list_creator(list)=user" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element4"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="resource∈resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element7"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos)" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos)+" org.eventb.core.poStamp="130">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos)" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos)+" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="resource≠list_resource(list)" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#evt2|org.eventb.core.guard#element8"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RMLIST/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="128">
+    <org.eventb.core.poSequent name="RMLIST/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos*)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list∈dom(list_creator)∧list_creator∈LISTS ⇸ USER" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3|org.eventb.core.guard#element4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3|org.eventb.core.guard#element4"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos*)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RMLIST/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="128">
+    <org.eventb.core.poSequent name="RMLIST/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{list} ⩤ list_creator∈lists ∖ {list} → USER" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'\/"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3"/>
@@ -350,7 +349,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#RMLIST\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RMLIST/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="128">
+    <org.eventb.core.poSequent name="RMLIST/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{list} ⩤ list_resource∈lists ∖ {list} → resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3"/>
@@ -358,22 +357,22 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#RMLIST\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos*" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="128">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos*" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="lists'" org.eventb.core.type="ℙ(LISTS)"/>
         <org.eventb.core.poIdentifier name="list_resource'" org.eventb.core.type="ℙ(LISTS×RESOURCES)"/>
         <org.eventb.core.poIdentifier name="list_creator'" org.eventb.core.type="ℙ(LISTS×USER)"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="list" org.eventb.core.type="LISTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPwebsite_authos*)" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos*" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPwebsite_authos*)" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos*" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈lecturers" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3|org.eventb.core.guard#grd2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="list∈lists" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3|org.eventb.core.guard#grd3"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos*" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos*)" org.eventb.core.poStamp="128">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos*" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTHYPwebsite_authos*)" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="list_creator(list)=user" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'3|org.eventb.core.guard#element4"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ADDRES/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="128">
+    <org.eventb.core.poSequent name="ADDRES/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos+"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list_resource∈lists → resources∪{resource}" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'4"/>
@@ -381,18 +380,18 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#ADDRES\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos+" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos+" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="resource" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="resources'" org.eventb.core.type="ℙ(RESOURCES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos+" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos+" org.eventb.core.poStamp="128">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos+" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos+" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈lecturers" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'4|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'4|org.eventb.core.guard#grd2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="resource∈RESOURCES" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'4|org.eventb.core.guard#element4"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="resource∉resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'4|org.eventb.core.guard#element6"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RMRES/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="128">
+    <org.eventb.core.poSequent name="RMRES/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTALLHYPwebsite_authos,"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="list_resource∈lists → resources ∖ {resource}" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5"/>
@@ -400,18 +399,18 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poSequent#RMRES\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos," org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTIDENTwebsite_authos," org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poIdentifier name="resource" org.eventb.core.type="RESOURCES"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="resources'" org.eventb.core.type="ℙ(RESOURCES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos," org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos," org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPwebsite_authos," org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#EVTIDENTwebsite_authos," org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈lecturers" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈logined" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5|org.eventb.core.guard#grd2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="resource∈resources" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5|org.eventb.core.guard#grd5"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="resource∉ran(list_resource)" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.event#'5|org.eventb.core.guard#element4"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="125">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/machine4.bpo|org.eventb.core.poFile#machine4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="132">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lists⊆LISTS" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'2"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="resources⊆RESOURCES" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'."/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="list_creator∈lists → USER" org.eventb.core.source="/LibrarySystem/machine4.bum|org.eventb.core.machineFile#machine4|org.eventb.core.invariant#'\/"/>

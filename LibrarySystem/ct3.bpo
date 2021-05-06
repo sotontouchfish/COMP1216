@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="7">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="8">
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="ROOT_PWD" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poPredicate name="ROOT_PWE" org.eventb.core.predicate="ROOT∈USER" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="ROOT_PWF" org.eventb.core.predicate="ROOT_PWD∈PASSWORD" org.eventb.core.source="/LibrarySystem/Root.buc|org.eventb.core.contextFile#Root|org.eventb.core.axiom#+"/>
         <org.eventb.core.poIdentifier name="AUTHORS" org.eventb.core.type="ℙ(AUTHORS)"/>
         <org.eventb.core.poIdentifier name="URLS" org.eventb.core.type="ℙ(URLS)"/>
         <org.eventb.core.poIdentifier name="RESOURCES" org.eventb.core.type="ℙ(RESOURCES)"/>
@@ -11,5 +17,5 @@
         <org.eventb.core.poPredicate name="PUBLISHERT" org.eventb.core.predicate="year&gt;0" org.eventb.core.source="/LibrarySystem/ct2.buc|org.eventb.core.contextFile#ct2|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poIdentifier name="LISTS" org.eventb.core.type="ℙ(LISTS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/ct3.bpo|org.eventb.core.poFile#ct3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/ct3.bpo|org.eventb.core.poFile#ct3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8"/>
 </org.eventb.core.poFile>
