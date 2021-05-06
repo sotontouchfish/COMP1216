@@ -8,10 +8,10 @@
         <org.eventb.core.action name="*" org.eventb.core.assignment="logined ≔ ∅" org.eventb.core.label="act5"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name=")" org.eventb.core.comment="all users" org.eventb.core.identifier="users"/>
-    <org.eventb.core.invariant name="*" org.eventb.core.comment="Initiate types" org.eventb.core.label="inv1" org.eventb.core.predicate="users ⊆ USER" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="*" org.eventb.core.comment="Initiate types" org.eventb.core.label="inv1" org.eventb.core.predicate="users ⊆ USER"/>
     <org.eventb.core.variable name="evt3" org.eventb.core.comment="admin set" org.eventb.core.identifier="admins"/>
     <org.eventb.core.variable name="+" org.eventb.core.comment="map between users and passwords" org.eventb.core.identifier="user_pwd"/>
-    <org.eventb.core.invariant name="evt7" org.eventb.core.label="inv2" org.eventb.core.predicate="admins ⊆ USER " org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="evt7" org.eventb.core.label="inv2" org.eventb.core.predicate="admins ⊆ USER "/>
     <org.eventb.core.invariant name="evt8" org.eventb.core.label="inv3" org.eventb.core.predicate="lecturers ⊂ USER "/>
     <org.eventb.core.invariant name="evt:" org.eventb.core.label="inv4" org.eventb.core.predicate="lecturers ∩ admins = ∅"/>
     <org.eventb.core.invariant name="," org.eventb.core.label="inv5" org.eventb.core.predicate="user_pwd ∈ users → PASSWORD "/>
