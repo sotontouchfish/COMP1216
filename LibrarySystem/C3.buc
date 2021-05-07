@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-    <org.eventb.core.extendsContext name="'" org.eventb.core.target="Root"/>
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="C2"/>
     <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="RESOURCES"/>
     <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="TITLES"/>
     <org.eventb.core.carrierSet name="*" org.eventb.core.identifier="AUTHORS"/>

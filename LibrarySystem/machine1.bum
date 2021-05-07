@@ -12,7 +12,7 @@
     <org.eventb.core.variable name="evt3" org.eventb.core.comment="admin set" org.eventb.core.identifier="admins"/>
     <org.eventb.core.variable name="+" org.eventb.core.comment="map between users and passwords" org.eventb.core.identifier="user_pwd"/>
     <org.eventb.core.invariant name="evt7" org.eventb.core.label="inv2" org.eventb.core.predicate="admins ⊆ USER "/>
-    <org.eventb.core.invariant name="evt8" org.eventb.core.label="inv3" org.eventb.core.predicate="lecturers ⊂ USER "/>
+    <org.eventb.core.invariant name="evt8" org.eventb.core.label="inv3" org.eventb.core.predicate="lecturers ⊆ USER "/>
     <org.eventb.core.invariant name="evt:" org.eventb.core.label="inv4" org.eventb.core.predicate="lecturers ∩ admins = ∅"/>
     <org.eventb.core.invariant name="," org.eventb.core.label="inv5" org.eventb.core.predicate="user_pwd ∈ users → PASSWORD "/>
     <org.eventb.core.variable name="evt4" org.eventb.core.comment="lecturers set" org.eventb.core.identifier="lecturers"/>
@@ -34,7 +34,7 @@
         <org.eventb.core.guard name="3" org.eventb.core.label="grd3" org.eventb.core.predicate="admin ∈ logined"/>
         <org.eventb.core.guard name="4" org.eventb.core.label="grd4" org.eventb.core.predicate="pwd ∈ PASSWORD "/>
     </org.eventb.core.event>
-    <org.eventb.core.seesContext name="1" org.eventb.core.target="Root"/>
+    <org.eventb.core.seesContext name="1" org.eventb.core.target="C2"/>
     <org.eventb.core.event name="evt9" org.eventb.core.comment="Set a user to lecturer" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SETLECTURER">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="admin"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="user"/>

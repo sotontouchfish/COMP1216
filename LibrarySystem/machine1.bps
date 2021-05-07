@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="REGISTER/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SETLECTURER/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SETLECTURER/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SETADMIN/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CHANGEPWD/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CHANGEPWD/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CHANGEPWD/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="LOGIN/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SetAdminToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SetLecturerToNormal/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SetLecturerToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="REGISTER/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SETLECTURER/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SETADMIN/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHANGEPWD/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHANGEPWD/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHANGEPWD/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="LOGIN/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SetAdminToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SetLecturerToNormal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

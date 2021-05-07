@@ -1,44 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine1"/>
-    <org.eventb.core.seesContext name="B" org.eventb.core.target="ct2"/>
+    <org.eventb.core.seesContext name="B" org.eventb.core.target="C4"/>
     <org.eventb.core.variable name=")" org.eventb.core.identifier="users"/>
     <org.eventb.core.variable name="+" org.eventb.core.identifier="user_pwd"/>
     <org.eventb.core.variable name="." org.eventb.core.identifier="logined"/>
     <org.eventb.core.variable name="C" org.eventb.core.identifier="lecturers"/>
     <org.eventb.core.variable name="D" org.eventb.core.identifier="admins"/>
-    <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="(" org.eventb.core.assignment="book ≔ ∅" org.eventb.core.label="act10"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="website ≔ ∅" org.eventb.core.label="act11"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="article ≔ ∅" org.eventb.core.label="act12"/>
-        <org.eventb.core.action name="'" org.eventb.core.assignment="website_titles ≔ ∅" org.eventb.core.label="act9"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="book_titles ≔ ∅" org.eventb.core.label="act13"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="book_authors ≔ ∅" org.eventb.core.label="act14"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="book_urls ≔ ∅" org.eventb.core.label="act15"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="book_ISBNs ≔ ∅" org.eventb.core.label="act16"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="book_publishers ≔ ∅" org.eventb.core.label="act17"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="publish_year ≔ ∅" org.eventb.core.label="act18"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="website_authors ≔ ∅" org.eventb.core.label="act19"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="website_urls ≔ ∅" org.eventb.core.label="act20"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="article_titles ≔ ∅" org.eventb.core.label="act21"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="article_authors ≔ ∅" org.eventb.core.label="act22"/>
-        <org.eventb.core.action name="5" org.eventb.core.assignment="article_urls ≔ ∅" org.eventb.core.label="act23"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="LOGIN">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="LOGIN"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="LOGOUT">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="LOGOUT"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REGISTER">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="REGISTER"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGEPWD">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGEPWD"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETADMIN">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETADMIN"/>
-    </org.eventb.core.event>
     <org.eventb.core.variable name="O" org.eventb.core.identifier="book"/>
     <org.eventb.core.variable name="P" org.eventb.core.identifier="website"/>
     <org.eventb.core.variable name="Q" org.eventb.core.identifier="article"/>
@@ -48,122 +15,121 @@
     <org.eventb.core.variable name="U" org.eventb.core.identifier="book_ISBNs"/>
     <org.eventb.core.variable name="V" org.eventb.core.identifier="book_publishers"/>
     <org.eventb.core.variable name="W" org.eventb.core.identifier="publish_year"/>
-    <org.eventb.core.invariant name="X" org.eventb.core.label="inv1" org.eventb.core.predicate="book ⊆ RESOURCES"/>
-    <org.eventb.core.invariant name="]" org.eventb.core.label="inv2" org.eventb.core.predicate="website ⊆ RESOURCES"/>
-    <org.eventb.core.invariant name="^" org.eventb.core.label="inv3" org.eventb.core.predicate="article ⊆ RESOURCES"/>
-    <org.eventb.core.invariant name="Y" org.eventb.core.label="inv4" org.eventb.core.predicate="book_titles ∈ book → TITLES"/>
-    <org.eventb.core.invariant name="Z" org.eventb.core.label="inv5" org.eventb.core.predicate="book_authors ∈ book → AUTHORS"/>
-    <org.eventb.core.invariant name="[" org.eventb.core.label="inv6" org.eventb.core.predicate="book_urls ∈ book → URLS"/>
-    <org.eventb.core.invariant name="\" org.eventb.core.label="inv7" org.eventb.core.predicate="book_ISBNs ∈ book → ISBNS"/>
-    <org.eventb.core.invariant name="_" org.eventb.core.label="inv8" org.eventb.core.predicate="book_publishers ∈ book → PUBLISHERS"/>
-    <org.eventb.core.invariant name="`" org.eventb.core.label="inv9" org.eventb.core.predicate="publish_year ∈ book → 0‥year"/>
-    <org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addBOOK">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
-        <org.eventb.core.parameter name="7" org.eventb.core.identifier="b"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="title"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="author"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="url"/>
-        <org.eventb.core.parameter name="+" org.eventb.core.identifier="ISBN"/>
-        <org.eventb.core.parameter name="," org.eventb.core.identifier="publisher"/>
-        <org.eventb.core.parameter name="-" org.eventb.core.identifier="book_publish_year"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd2" org.eventb.core.predicate="b ∉ book "/>
-        <org.eventb.core.guard name="C" org.eventb.core.label="grd11" org.eventb.core.predicate="b ∈ RESOURCES"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="url ∉ ran(book_urls)"/>
-        <org.eventb.core.guard name="D" org.eventb.core.label="grd12" org.eventb.core.predicate="url ∈ URLS"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="ISBN ∉ ran(book_ISBNs)"/>
-        <org.eventb.core.action name="5" org.eventb.core.assignment="book ≔ book ∪ {b}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="8" org.eventb.core.assignment="book_titles ≔ book_titles ∪ {b ↦ title}" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="9" org.eventb.core.assignment="book_authors ≔ book_authors ∪ {b ↦ author}" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name=":" org.eventb.core.assignment="book_urls ≔ book_urls ∪ {b ↦ url}" org.eventb.core.label="act4"/>
-        <org.eventb.core.action name=";" org.eventb.core.assignment="book_ISBNs ≔ book_ISBNs ∪ {b ↦ ISBN}" org.eventb.core.label="act5"/>
-        <org.eventb.core.action name="=" org.eventb.core.assignment="book_publishers ≔ book_publishers ∪ {b ↦ publisher}" org.eventb.core.label="act6"/>
-        <org.eventb.core.action name="&gt;" org.eventb.core.assignment="publish_year ≔ publish_year ∪ {b ↦ book_publish_year}" org.eventb.core.label="act7"/>
-        <org.eventb.core.guard name="E" org.eventb.core.label="grd13" org.eventb.core.predicate="ISBN ∈ ISBNS"/>
-        <org.eventb.core.guard name="?" org.eventb.core.label="grd7" org.eventb.core.predicate="title ∈ TITLES"/>
-        <org.eventb.core.guard name="@" org.eventb.core.label="grd8" org.eventb.core.predicate="author ∈ AUTHORS"/>
-        <org.eventb.core.guard name="A" org.eventb.core.label="grd9" org.eventb.core.predicate="publisher ∈ PUBLISHERS"/>
-        <org.eventb.core.guard name="B" org.eventb.core.label="grd10" org.eventb.core.predicate="book_publish_year ∈ 0‥year"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rmBOOK">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="b"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="b ∈ book"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="book ≔ book ∖ {b} " org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="book_titles ≔ {b} ⩤ book_titles" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="book_authors ≔ {b} ⩤ book_authors" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="book_urls ≔ {b} ⩤ book_urls" org.eventb.core.label="act4"/>
-        <org.eventb.core.action name="5" org.eventb.core.assignment="book_ISBNs ≔ {b} ⩤ book_ISBNs" org.eventb.core.label="act5"/>
-        <org.eventb.core.action name="6" org.eventb.core.assignment="book_publishers ≔ {b} ⩤ book_publishers" org.eventb.core.label="act6"/>
-        <org.eventb.core.action name="7" org.eventb.core.assignment="publish_year ≔ {b} ⩤ publish_year" org.eventb.core.label="act7"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addWebsite">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="w"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="title"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd7" org.eventb.core.predicate="author ∈ AUTHORS"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="title ∈ TITLES" org.eventb.core.theorem="true"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="w ∉ website"/>
-        <org.eventb.core.guard name="7" org.eventb.core.label="grd8" org.eventb.core.predicate="w ∈ RESOURCES"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="url ∉ ran(website_urls)"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="website ≔ website ∪ {w}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="website_titles ≔ website_titles ∪ {w ↦ title}" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="website_authors ≔ website_authors ∪ {w ↦ author}" org.eventb.core.label="act3"/>
-        <org.eventb.core.parameter name="2" org.eventb.core.identifier="author"/>
-        <org.eventb.core.parameter name="3" org.eventb.core.identifier="url"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="website_urls ≔ website_urls ∪ {w ↦ url}" org.eventb.core.label="act4"/>
-        <org.eventb.core.guard name="8" org.eventb.core.label="grd9" org.eventb.core.predicate="url ∈ URLS"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rmWebsite">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="w"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="w ∈ website"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="website ≔ website ∖ {w}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="website_titles ≔ {w} ⩤ website_titles" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="website_authors ≔ {w} ⩤ website_authors" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="website_urls ≔ {w} ⩤ website_urls" org.eventb.core.label="act4"/>
-    </org.eventb.core.event>
     <org.eventb.core.variable name="e" org.eventb.core.identifier="website_titles"/>
-    <org.eventb.core.invariant name="f" org.eventb.core.label="inv10" org.eventb.core.predicate="website_titles ∈ website → TITLES"/>
     <org.eventb.core.variable name="g" org.eventb.core.identifier="website_authors"/>
-    <org.eventb.core.invariant name="h" org.eventb.core.label="inv11" org.eventb.core.predicate="website_authors ∈ website → AUTHORS"/>
     <org.eventb.core.variable name="i" org.eventb.core.identifier="website_urls"/>
-    <org.eventb.core.invariant name="j" org.eventb.core.label="inv12" org.eventb.core.predicate="website_urls ∈ website → URLS"/>
     <org.eventb.core.variable name="k" org.eventb.core.identifier="article_titles"/>
-    <org.eventb.core.invariant name="l" org.eventb.core.label="inv13" org.eventb.core.predicate="article_titles ∈ article → TITLES"/>
     <org.eventb.core.variable name="m" org.eventb.core.identifier="article_authors"/>
-    <org.eventb.core.invariant name="n" org.eventb.core.label="inv14" org.eventb.core.predicate="article_authors ∈ article → AUTHORS"/>
     <org.eventb.core.variable name="o" org.eventb.core.identifier="article_urls"/>
-    <org.eventb.core.invariant name="p" org.eventb.core.label="inv15" org.eventb.core.predicate="article_urls ∈ article → URLS"/>
-    <org.eventb.core.event name="q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addArticle">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="a"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="title"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="a ∉ article"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="a ∈ RESOURCES"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="title ∈ TITLES"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="author ∈ AUTHORS"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="url ∉ ran(article_urls)"/>
-        <org.eventb.core.parameter name="/" org.eventb.core.identifier="author"/>
-        <org.eventb.core.parameter name="0" org.eventb.core.identifier="url"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="article ≔ article ∪ {a}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="article_titles ≔ article_titles ∪ {a ↦ title}" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="article_authors ≔ article_authors ∪ {a ↦ author}" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="article_urls ≔ article_urls ∪ {a ↦ url}" org.eventb.core.label="act4"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd7" org.eventb.core.predicate="url ∈ URLS"/>
+    <org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="+" org.eventb.core.assignment="lists ≔ ∅" org.eventb.core.label="act44"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="list_resource ≔ ∅" org.eventb.core.label="act45"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="list_creator ≔ ∅" org.eventb.core.label="act46"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="resources ≔ ∅" org.eventb.core.label="act47"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="r" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="rmArticle">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="user"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="a"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ admins"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="a ∈ article"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="article ≔ article ∖ {a}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="article_titles ≔ {a} ⩤ article_titles" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="article_authors ≔ {a} ⩤ article_authors" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="article_urls ≔ {a} ⩤ article_urls" org.eventb.core.label="act4"/>
+    <org.eventb.core.event name="q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="LOGIN">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="LOGIN"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="r" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="LOGOUT">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="LOGOUT"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="s" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REGISTER">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="REGISTER"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="t" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGEPWD">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGEPWD"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="v" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETADMIN">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SETADMIN"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addBOOK">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addBOOK"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="y" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="rmBOOK">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmBOOK"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="z" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addWebsite">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addWebsite"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="rmWebsite">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmWebsite"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="|" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addArticle">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addArticle"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="}" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="rmArticle">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="rmArticle"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="~" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CRELIST">
+        <org.eventb.core.guard name=")" org.eventb.core.comment="This creator is a lecturer" org.eventb.core.label="grd1" org.eventb.core.predicate="creator ∈ lecturers"/>
+        <org.eventb.core.guard name="*" org.eventb.core.comment="This creator is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="creator ∈ logined"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="lists ≔ lists ∪ {list}" org.eventb.core.comment="Add list to lists" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="list_creator(list) ≔ creator" org.eventb.core.comment="Set the user as the creator of this list" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.comment="The creator which is a user" org.eventb.core.identifier="creator"/>
+        <org.eventb.core.parameter name="." org.eventb.core.comment="The new list" org.eventb.core.identifier="list"/>
+        <org.eventb.core.guard name="/" org.eventb.core.comment="The list is not part of existing lists" org.eventb.core.label="grd4" org.eventb.core.predicate="list ∉ lists "/>
+        <org.eventb.core.parameter name="1" org.eventb.core.comment="The resources to be add" org.eventb.core.identifier="resource"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="list_resource(list) ≔ resource" org.eventb.core.comment="Adding resources to the list" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name="3" org.eventb.core.comment="The resources are available" org.eventb.core.label="grd5" org.eventb.core.predicate="resource ∈ resources "/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RELIST">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who remove this list" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element2" org.eventb.core.comment="A list to be removed" org.eventb.core.identifier="list"/>
+        <org.eventb.core.parameter name="element3" org.eventb.core.comment="The resources to be renew" org.eventb.core.identifier="resource"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is a lecturer" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="The list is a part of existing lists" org.eventb.core.label="grd3" org.eventb.core.predicate="list ∈ lists "/>
+        <org.eventb.core.guard name="element4" org.eventb.core.comment="The user who remove the list should be the creator of the list" org.eventb.core.label="grd4" org.eventb.core.predicate="list_creator(list) = user"/>
+        <org.eventb.core.action name="element6" org.eventb.core.assignment="list_resource(list) ≔ resource" org.eventb.core.comment="Reload resources for the list" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="element7" org.eventb.core.comment="The resources are available" org.eventb.core.label="grd5" org.eventb.core.predicate="resource ∈ resources"/>
+        <org.eventb.core.guard name="element8" org.eventb.core.comment="Check that the resources are the same as the before" org.eventb.core.label="grd6" org.eventb.core.predicate="resource ≠ list_resource(list)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="'+" org.eventb.core.comment="The resources in a list" org.eventb.core.identifier="list_resource"/>
+    <org.eventb.core.variable name="'6" org.eventb.core.comment="The set of resources in list" org.eventb.core.identifier="resources"/>
+    <org.eventb.core.variable name="'-" org.eventb.core.comment="The creator of list" org.eventb.core.identifier="list_creator"/>
+    <org.eventb.core.invariant name="'2" org.eventb.core.label="inv1" org.eventb.core.predicate="lists ⊆ LISTS"/>
+    <org.eventb.core.invariant name="'." org.eventb.core.label="inv2" org.eventb.core.predicate="resources ⊆ RESOURCES"/>
+    <org.eventb.core.invariant name="'/" org.eventb.core.label="inv3" org.eventb.core.predicate="list_creator ∈ lists → USER"/>
+    <org.eventb.core.variable name="'1" org.eventb.core.comment="A set of all available lists" org.eventb.core.identifier="lists"/>
+    <org.eventb.core.event name="'3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RMLIST">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who remove this list" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element2" org.eventb.core.comment="A list to be removed" org.eventb.core.identifier="list"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is a lecturer" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.comment="The list is a part of existing lists" org.eventb.core.label="grd3" org.eventb.core.predicate="list ∈ lists "/>
+        <org.eventb.core.action name="element3" org.eventb.core.assignment="lists ≔ lists ∖ {list}" org.eventb.core.comment="Remove the list from the set of list" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="element4" org.eventb.core.comment="The user who remove the list should be the creator of the list" org.eventb.core.label="grd4" org.eventb.core.predicate="list_creator(list) = user"/>
+        <org.eventb.core.action name="element5" org.eventb.core.assignment="list_creator ≔ {list}⩤ list_creator" org.eventb.core.comment="Remove the creator of this list" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="element6" org.eventb.core.assignment="list_resource ≔ {list}⩤ list_resource" org.eventb.core.comment="Remove all resources in this list" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ADDRES">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who add resource to this list" org.eventb.core.identifier="user"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is a lecturer" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.parameter name="element3" org.eventb.core.comment="Resources to be added to the list" org.eventb.core.identifier="resource"/>
+        <org.eventb.core.guard name="element4" org.eventb.core.comment="The resources to be added are available" org.eventb.core.label="grd5" org.eventb.core.predicate="resource ∈ RESOURCES"/>
+        <org.eventb.core.action name="element5" org.eventb.core.assignment="resources ≔ resources ∪ {resource}" org.eventb.core.comment="Add a resource to set of resources" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="element6" org.eventb.core.label="grd6" org.eventb.core.predicate="resource ∉ resources"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="'5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RMRES">
+        <org.eventb.core.parameter name="element1" org.eventb.core.comment="The user who remove resource to this list" org.eventb.core.identifier="user"/>
+        <org.eventb.core.parameter name="element3" org.eventb.core.comment="Resources to be removed to the list" org.eventb.core.identifier="resource"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.comment="This user is a lecturer" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ lecturers"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.comment="This user is logged in" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ logined"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.comment="The resources to be removed are available" org.eventb.core.label="grd5" org.eventb.core.predicate="resource ∈ resources"/>
+        <org.eventb.core.action name="act1" org.eventb.core.assignment="resources ≔ resources ∖ {resource}" org.eventb.core.comment="Remove a resource to set of resources" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="element4" org.eventb.core.label="grd6" org.eventb.core.predicate="resource ∉ ran(list_resource)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt3" org.eventb.core.comment="dischage a lecturer" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SetLecturerToNormal">
+        <org.eventb.core.refinesEvent name="0" org.eventb.core.target="SetLecturerToNormal"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt4" org.eventb.core.comment="Set a user to lecturer" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SETLECTURER">
+        <org.eventb.core.refinesEvent name="/" org.eventb.core.target="SETLECTURER"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt5" org.eventb.core.comment="discharge a admin" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SetAdminToNormal">
+        <org.eventb.core.refinesEvent name="0" org.eventb.core.target="SetAdminToNormal"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="'7" org.eventb.core.label="inv4" org.eventb.core.predicate="list_resource ∈ lists → resources"/>
+    <org.eventb.core.refinesMachine name="evt3" org.eventb.core.target="machine2"/>
+    <org.eventb.core.variable name="evt4" org.eventb.core.identifier="isbns"/>
 </org.eventb.core.machineFile>
